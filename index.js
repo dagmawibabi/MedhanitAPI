@@ -3,15 +3,15 @@ let app = express();
 
 let chats = [
     {
-        from: "Dagmawi",
-        message: "Hey Man!!!",
-        date: "1634997427169"
+        from: "Server",
+        message: "📪",
+        date: "1634997427169",
     },
     {
-        from: "Babi",
-        message: "What up!!!",
-        date: "1634997427769"
-    },
+        from: "Server",
+        message: "You have no messages!",
+        date: "1634997427169",
+    }
 ]
 
 // Welcome Screen
@@ -40,6 +40,23 @@ app.get("/api/chats/:sender/:message",(req, res) => {
     chats.push(newMessage);
     res.send(`Message Sent! - \n \t ${newMessage}`);
 });
+
+// Clear chat
+app.get("/api/chats/clearAll",(req, res) => {
+    chats = [
+        {
+            from: "Server",
+            message: "📪",
+            date: "1634997427169",
+        },
+        {
+            from: "Server",
+            message: "You have no messages!",
+            date: "1634997427169",
+        }
+    ];
+});
+
 
 // Port
 let portNum = process.env.PORT || 7000;
