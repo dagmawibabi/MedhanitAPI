@@ -35,6 +35,7 @@ app.get("/api/chats/:sender/:message",(req, res) => {
     let newMessage = {
         from: req.params.sender,
         message: req.params.message,
+        date: Date.now(),
     };
     chats.push(newMessage);
     res.send(`Message Sent! - \n \t ${newMessage}`);
