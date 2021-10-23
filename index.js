@@ -5,10 +5,12 @@ let chats = [
     {
         from: "Dagmawi",
         message: "Hey Man!!!",
+        date: "1634997427169"
     },
     {
         from: "Babi",
         message: "What up!!!",
+        date: "1634997427769"
     },
 ]
 
