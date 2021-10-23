@@ -14,10 +14,23 @@ let chats = [
     }
 ]
 
+
 // Welcome Screen
 app.get("/",(req, res) => {
     res.send("Welcome to simple chat!");
 });
+
+let moodColor = {"color": "grey"};
+// Send colors
+app.get("/api/colors/:color",(req, res) => {
+    moodColor["color"] = req.params.color;
+    res.send(moodColor);
+});
+// Get colors
+app.get("/api/colors",(req, res) => {
+    res.send(moodColor);
+});
+
 
 // Retrieve all chats in DB
 app.get("/api/chats",(req, res) => {
