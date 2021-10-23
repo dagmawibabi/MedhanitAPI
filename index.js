@@ -37,6 +37,7 @@ app.get("/api/chats/:sender/:message",(req, res) => {
         message: req.params.message,
         date: Date.now(),
     };
+
     chats.push(newMessage);
     res.send(`Message Sent! - \n \t ${newMessage}`);
 });
@@ -55,6 +56,7 @@ app.get("/api/chats/clearAll",(req, res) => {
             date: "1634997427169",
         }
     ];
+    res.send("Chats cleared successfully!");
 });
 
 
