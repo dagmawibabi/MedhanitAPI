@@ -43,8 +43,8 @@ app.get("/api/chats/:sender/:message",(req, res) => {
 });
 
 // Clear chat
-app.get("/api/chats/clearAll",(req, res) => {
-    chats = [
+app.get("/api/chats/clearall",(req, res) => {
+    /*chats = [
         {
             from: "Server",
             message: "📪",
@@ -55,7 +55,7 @@ app.get("/api/chats/clearAll",(req, res) => {
             message: "You have no messages!",
             date: "1634997427169",
         }
-    ];
+    ];*/
     res.send("Chats cleared successfully!");
 });
 
