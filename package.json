@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/dagmawibabi/MedhanitAPI/issues"
   },
-  "homepage": "https://github.com/dagmawibabi/MedhanitAPI#readme"
+  "homepage": "https://github.com/dagmawibabi/MedhanitAPI#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
