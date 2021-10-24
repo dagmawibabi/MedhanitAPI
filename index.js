@@ -12,7 +12,7 @@ var mainFeed = [
     },
 ];
 
-var background = "https://i.pinimg.com/564x/b4/b2/22/b4b222b408f29041573218477bd457a6.jpg";
+var background = ["https://i.pinimg.com/564x/b4/b2/22/b4b222b408f29041573218477bd457a6.jpg"];
 
 // Home
 app.get("/",(req, res) => {
