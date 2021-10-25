@@ -33,7 +33,7 @@ var colorCode = [
         "meaning": "Means I killed someone",
     },
 ];
-var curColorMood = ["Colors.green"];
+var curColorMood = ["0xff789461"];
 var colorTitle = ["Color Code"];
 
 // Home
