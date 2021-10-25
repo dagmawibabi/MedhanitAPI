@@ -17,15 +17,19 @@ var background = {"link": "https://i.pinimg.com/564x/b4/b2/22/b4b222b408f2904157
 // Mood Feed
 var colorCode = [
     {
-        "color": "Colors.green",
+        "color": "Blue",
+        "meaning": "Means I'm feeling bluey'",
+    },
+    {
+        "color": "Green",
         "meaning": "Means I'm feeling planty",
     },
     {
-        "color": "Colors.yellow",
+        "color": "Yellow",
         "meaning": "Means I'm feeling yellowy",
     },
     {
-        "color": "Colors.red",
+        "color": "Red",
         "meaning": "Means I killed someone",
     },
 ];
