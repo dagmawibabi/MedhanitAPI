@@ -65,12 +65,10 @@ app.get("/api/moodfeed/sendcolorcode", (req, res) => {
 });
 // Update Color Code
 app.get("/api/moodfeed/updatecolorcode", (req, res) => {
-    var newColorCode = [
-        {
+    var newColorCode = {
             "color": req.query.color,
             "meaning": req.query.meaning,
-        },
-    ];
+        };
     colorCode.push(newColorCode);
     res.send(colorCode);
 });
