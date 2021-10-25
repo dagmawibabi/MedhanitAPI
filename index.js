@@ -21,7 +21,7 @@ var mainFeed = [
     {
         "title": "A Picture Of Us",
         "body": "Here's an aesthetic picture of us!",
-        "image": "https://i.pinimg.com/236x/d3/9e/93/d39e9397c8d078914a27745e4bb203a7.jpg",
+        "image": "https://i.pinimg.com/236x/7b/ac/02/7bac027ae0c163556293c246dfcb2c52.jpg",
         "music": "https://www.youtube.com/watch?v=Wv2rLZmbPMA",
         "from": "Dagmawi Babi",
     },
