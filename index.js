@@ -21,7 +21,21 @@ app.get("/",(req, res) => {
 
 // Main Feed
 // Sending Main Feed
-app.get("/api/mainfeed/send/:title/:body/:image/:music/:from",(req, res) => {
+app.get("/api/mainfeed/send",(req, res) => {
+    var newFeed = {
+        "title": req.query.title,
+        "body": req.query.body,
+        "image": req.query.image,
+        "music": req.query.music,
+        "from": req.query.from,
+    }
+    mainFeed.push(newFeed);
+    console.log("here");
+    //res.send(req.query.title);
+    res.send(`Message Sent! - ${newFeed}`);
+});
+// Sending Main Feed
+/*app.get("/api/mainfeed/send/:title/:body/:image/:music/:from",(req, res) => {
     var newFeed = {
         "title": req.params.title,
         "body": req.params.body,
@@ -31,7 +45,7 @@ app.get("/api/mainfeed/send/:title/:body/:image/:music/:from",(req, res) => {
     }
     mainFeed.push(newFeed);
     res.send(`Message Sent! - ${newFeed}`);
-});
+});*/
 // Receiving Main Feed
 app.get("/api/mainfeed/receive",(req, res) => {
     res.send(mainFeed);
