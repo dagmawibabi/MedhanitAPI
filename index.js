@@ -19,6 +19,19 @@ app.get("/",(req, res) => {
     res.send("Welcome to Medhanit API");
 });
 
+
+app.get("/api/mainfeed/clearall", (req, res) => {
+    mainFeed = [
+        {
+            "title": "Hello",
+            "body": "Hello there",
+            "image": 0,
+            "music": "https://www.youtube.com/watch?v=cHTEGQbtP1I",
+            "from": "Dagmawi Babi",
+        },];
+
+});
+
 // Main Feed
 // Sending Main Feed
 app.get("/api/mainfeed/send",(req, res) => {
