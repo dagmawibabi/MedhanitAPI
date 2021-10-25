@@ -28,7 +28,10 @@ app.get("/api/mainfeed/clearall", (req, res) => {
             "image": 0,
             "music": "https://www.youtube.com/watch?v=cHTEGQbtP1I",
             "from": "Dagmawi Babi",
-        },];
+        }
+    ];
+
+    res.send("Cleared feed!");
 
 });
 
