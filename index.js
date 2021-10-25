@@ -21,6 +21,10 @@ var colorCode = [
         "meaning": "Means I'm feeling bluey",
     },
     {
+        "color": "Cyan",
+        "meaning": "Means I'm feeling cyany",
+    },
+    {
         "color": "Green",
         "meaning": "Means I'm feeling planty",
     },
