@@ -18,7 +18,7 @@ var background = {"link": "https://i.pinimg.com/564x/b4/b2/22/b4b222b408f2904157
 var colorCode = [
     {
         "color": "Blue",
-        "meaning": "Means I'm feeling bluey'",
+        "meaning": "Means I'm feeling bluey",
     },
     {
         "color": "Green",
@@ -45,6 +45,13 @@ app.get("/",(req, res) => {
 app.get("/api/moodfeed/sendcolor/", (req, res) => {
     curColorMood[0] = req.query.color;
     res.send(`Sent color! - ${curColorMood}`);
+});
+// Send Color title
+app.get("/api/moodfeed/sendcolortitle", (req, res) => {
+    colorTitle = [
+        req.query.title
+    ];
+    res.send(colorTitle);
 });
 // Send Color Code
 app.get("/api/moodfeed/sendcolorcode", (req, res) => {
