@@ -53,7 +53,7 @@ app.get("/api/mainfeed/receive",(req, res) => {
 
 // Send BG
 app.get("/api/mainfeed/background/send",(req, res) => {
-    background = req.query.link;
+    background[0] = req.query.link;
     res.send("Background Sent!");
 });
 
