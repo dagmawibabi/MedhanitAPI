@@ -30,31 +30,57 @@ var colorCode = [
     },
 ];
 var curColorMood = ["Colors.green"];
-
+var colorTitle = ["Color Code"];
 
 // Home
 app.get("/",(req, res) => {
     res.send("Welcome to Medhanit API");
 });
 
-
+// Send Color
 app.get("/api/moodfeed/sendcolor/", (req, res) => {
     curColorMood[0] = req.query.color;
     res.send(`Sent color! - ${curColorMood}`);
 });
+// Send Color Code
 app.get("/api/moodfeed/sendcolorcode", (req, res) => {
     colorCode = [
         {
-            "color": "Colors.green",
-            "meaning": "Means I'm feeling planty",
+            "color": req.query.color,
+            "meaning": req.query.meaning,
         },
     ];
     res.send(colorCode);
 });
+// Update Color Code
+app.get("/api/moodfeed/updatecolorcode", (req, res) => {
+    var newColorCode = [
+        {
+            "color": req.query.color,
+            "meaning": req.query.meaning,
+        },
+    ];
+    colorCode.push(newColorCode);
+    res.send(colorCode);
+});
+// Clear ALL Color
+app.get("/api/moodfeed/clearall", (req, res) => {
+    curColorMood = [""];
+    colorTitle = [""];
+    colorCode = [];
+    res.send("Cleared Color Code!");
+});
 
+
+// Get Color Title
+app.get("/api/moodfeed/receivecolortitle", (req, res) => {
+    res.send(colorTitle);
+});
+// Get Color
 app.get("/api/moodfeed/receivecolor", (req, res) => {
     res.send(curColorMood);
 });
+// Get Color Code
 app.get("/api/moodfeed/receivecolorcode", (req, res) => {
     res.send(colorCode);
 });
