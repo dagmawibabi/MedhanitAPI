@@ -8,7 +8,21 @@ var mainFeed = [
         "title": "Hello",
         "body": "Hello there",
         "image": 0,
+        "music": 0,
+        "from": "Dagmawi Babi",
+    },
+    {
+        "title": "Tenerife Sea",
+        "body": "This is one of my fav songs. I hope you like it!",
+        "image": 0,
         "music": "https://www.youtube.com/watch?v=cHTEGQbtP1I",
+        "from": "Dagmawi Babi",
+    },
+    {
+        "title": "A Picture Of Us",
+        "body": "Here's an aesthetic picture of us!",
+        "image": "https://i.pinimg.com/236x/d3/9e/93/d39e9397c8d078914a27745e4bb203a7.jpg",
+        "music": "https://www.youtube.com/watch?v=Wv2rLZmbPMA",
         "from": "Dagmawi Babi",
     },
 ];
