@@ -38,8 +38,9 @@ app.get("/",(req, res) => {
 });
 
 
-app.get("/api/moodfeed/sendcolor/:id", (req, res) => {
-    res.send(`Sent color! - ${colorCode[req.params.id]}`);
+app.get("/api/moodfeed/sendcolor/", (req, res) => {
+    curColorMood[0] = req.query.color;
+    res.send(`Sent color! - ${curColorMood}`);
 });
 app.get("/api/moodfeed/sendcolorcode", (req, res) => {
     colorCode = [
